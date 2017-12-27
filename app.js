@@ -7,12 +7,12 @@ var consoleR = require('./app/routes/console');
 const mongodb = require('mongodb');
 
 const MongoClient = mongodb.MongoClient;
-const url = process.env.MONGO_URL? process.env.MONGO_URL : 'mongodb://localhost:27017/test_end_point';
+const url = process.env.MONGO_URL? process.env.MONGO_URL : 'mongodb://mfkep:mfkep1234@ds133557.mlab.com:33557/heroku_b10ghscl';
 let db;
 MongoClient.connect(url, (err, database) => {
   if (err) return console.log(err);
   db = database;
-  app.listen(3000,'0.0.0.0', () => {
+  app.listen(process.env.PORT || 80, () => {
     console.log('listening');
   });
   message(app, db,jsonParser);
