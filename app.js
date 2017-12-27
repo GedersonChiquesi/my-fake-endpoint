@@ -7,7 +7,7 @@ var consoleR = require('./app/routes/console');
 const mongodb = require('mongodb');
 
 const MongoClient = mongodb.MongoClient;
-const url = process.env.MONGO_URL? process.env.MONGO_URL : 'mongodb://mfkep:mfkep1234@ds133557.mlab.com:33557/heroku_b10ghscl';
+const url = process.env.MONGO_URL? process.env.MONGO_URL : 'mongodb://localhost:27017/heroku_b10ghscl';
 let db;
 MongoClient.connect(url, (err, database) => {
   if (err) return console.log(err);
