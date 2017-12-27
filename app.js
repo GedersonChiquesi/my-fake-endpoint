@@ -2,7 +2,7 @@ const app = require('./config/server');
 var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json();
 var message = require('./app/routes/message');
-//var home = require('./app/routes/home');
+var home = require('./app/routes/home');
 var consoleR = require('./app/routes/console');
 const mongodb = require('mongodb');
 
@@ -17,4 +17,5 @@ MongoClient.connect(url, (err, database) => {
   });
   message(app, db,jsonParser);
   consoleR(app,db);
+  home(app,db);
 });
