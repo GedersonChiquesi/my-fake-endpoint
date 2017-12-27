@@ -1,6 +1,6 @@
 module.exports = function (app, db) {
   app.get('/console', (req, res) => {
-      database = db.db('test_end_point');
+      database = db.db('heroku_b10ghscl');
       database.collection('results').find({},{body:1})
         .toArray((err, result) => {
           if (err) return console.log(err);
