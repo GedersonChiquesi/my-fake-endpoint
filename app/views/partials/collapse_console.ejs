@@ -1,0 +1,12 @@
+<%for(var i=0; i<quotes.length; i++){%>
+      <li>
+      <div class='collapsible-header'><i class='material-icons'>filter_drama</i><span class='text-right'> <%= quotes[i].date.replace("UPC:","")%></span></div>
+      <div class='collapsible-body'>
+      <label>Path</label>
+      <pre class='grey lighten-3'> <%- JSON.stringify(quotes[i].path,undefined,2) %></pre>
+      <label>Headers</label>
+      <pre class='grey lighten-3'> <%- JSON.stringify(quotes[i].headers,undefined,2) %></pre>
+      <label>Body</label>
+      <pre class='grey lighten-3'> <%- JSON.stringify(quotes[i].body,undefined,2) %></pre></div>
+    </li>
+<%};%>  

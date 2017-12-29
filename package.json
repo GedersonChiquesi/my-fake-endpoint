@@ -1,7 +1,11 @@
 {
   "name": "my-fake-endpoint",
   "version": "1.0.0",
-  "description": "",
+  "description": "FAKE REST API designed to help developers and QAs test their applications that need a fake endpoint for callbacks",
+  "repository":{
+    "type": "git",
+    "url": "git@github.com:GedersonChiquesi/my-fake-endpoint.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
